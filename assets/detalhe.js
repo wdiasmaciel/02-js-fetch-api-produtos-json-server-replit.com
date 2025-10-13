@@ -19,7 +19,7 @@ const buscarNoticia = async (id) => {
         .catch(error => console.error(error))
 };
 
-const apresentarDetalhesDaNoticia = async () => {
+const apresentarDetalhesDaNoticia = () => {
     const container = document.getElementById("painel-de-detalhes");
     
     if (noticia) {
