@@ -38,7 +38,7 @@ function apresentarNoticias() {
             <p class="descricao-noticia-cartao">${noticia.descricao}</p>
             <p class="autor-noticia-cartao">${noticia.autor}</p>
           </section>
-          <a class="botao-cartao" href="detalhes.html?id=${noticia.id}">Leia mais</a>
+          <a class="botao-cartao" href="detalhe.html?id=${noticia.id}">Leia mais</a>
         `;
 
         container.appendChild(cartao);
