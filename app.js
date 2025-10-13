@@ -1,4 +1,4 @@
-var noticias = [];
+let noticias = [];
 
 async function alternarApresentacaoDasNoticias() {
     const container = document.getElementById("container");
@@ -27,11 +27,14 @@ const buscarNoticias = async () => {
 const buscarNoticia = async (id) => {
     const replit = 'https://34ac9f47-2892-46f8-87a3-6f2a6e58ccd3-00-33ak4a7xu53ng.riker.replit.dev/'; // URL do projeto no Replit.com.
     const url = replit + "noticias/" + id;
+    let noticia;
 
     await fetch(url)
         .then(response => response.json())
-        .then(json => noticias = json)
+        .then(json => noticia = json)
         .catch(error => console.error(error))
+    
+    return noticia;
 };
 
 function apresentarNoticias() {
