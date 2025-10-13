@@ -1,13 +1,12 @@
-let noticias = [];
+var noticias = [];
 
-function alternarApresentacaoDasNoticias() {
+async function alternarApresentacaoDasNoticias() {
     const container = document.getElementById("container");
-alert(noticias.length);
-    if (noticias.length === 0) {
-        buscarNoticias;
+
+    if (noticias.length == 0) {
+        await buscarNoticias();
         apresentarNoticias();
-    }
-    else {
+    } else {
         container.innerHTML = "";
         noticias = [];
     }
@@ -17,7 +16,7 @@ alert(noticias.length);
 const buscarNoticias = async () => {
     const replit = 'https://34ac9f47-2892-46f8-87a3-6f2a6e58ccd3-00-33ak4a7xu53ng.riker.replit.dev/'; // URL do projeto no Replit.com.
     const url = replit + "noticias";
-    alert(url);
+
     await fetch(url)
         .then(response => response.json())
         .then(json => noticias = json)
@@ -44,7 +43,6 @@ function apresentarNoticias() {
 
         container.appendChild(cartao);
     });
-
 }
 
 function alternarVisualizacaoDoMenuLateral() {
