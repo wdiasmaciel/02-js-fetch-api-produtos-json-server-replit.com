@@ -23,6 +23,17 @@ const buscarNoticias = async () => {
         .catch(error => console.error(error))
 };
 
+//GET:
+const buscarNoticia = async (id) => {
+    const replit = 'https://34ac9f47-2892-46f8-87a3-6f2a6e58ccd3-00-33ak4a7xu53ng.riker.replit.dev/'; // URL do projeto no Replit.com.
+    const url = replit + "noticias/" + id;
+
+    await fetch(url)
+        .then(response => response.json())
+        .then(json => noticias = json)
+        .catch(error => console.error(error))
+};
+
 function apresentarNoticias() {
     const container = document.getElementById("container");
 
