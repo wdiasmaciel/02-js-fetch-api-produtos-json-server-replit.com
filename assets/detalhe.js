@@ -22,7 +22,7 @@ const buscarNoticia = async (id) => {
 const apresentarDetalhesDaNoticia = () => {
     const container = document.getElementById("painel-de-detalhes");
     
-    if (noticia.id != undefined) {
+    if (noticia && noticia.id != undefined) {
         container.innerHTML = `
               <h1>${noticia.titulo}</h1>
               <p>${noticia.categoria} - ${noticia.data}</p>
