@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 //GET:
 const buscarNoticia = async (id) => {
-    const replit = 'https://34ac9f47-2892-46f8-87a3-6f2a6e58ccd3-00-33ak4a7xu53ng.riker.replit.dev/'; // URL do projeto no Replit.com.
+    const replit = 'https://7e05163a-d017-46f9-9c6d-9b54636fc02d-00-13ilh843ckczq.worf.replit.dev/'; // URL do projeto no Replit.com.
     const url = replit + "noticias/" + id;
 
     await fetch(url)
@@ -22,7 +22,7 @@ const buscarNoticia = async (id) => {
 const apresentarDetalhesDaNoticia = () => {
     const container = document.getElementById("painel-de-detalhes");
     
-    if (noticia) {
+    if (noticia.id != undefined) {
         container.innerHTML = `
               <h1>${noticia.titulo}</h1>
               <p>${noticia.categoria} - ${noticia.data}</p>
